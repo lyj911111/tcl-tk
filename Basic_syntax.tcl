@@ -1,3 +1,6 @@
+#!/usr/bin/tclsh
+# 1st line is for Linux user
+
 # Tcl syntax
 
 # 콘솔창에 hello world 출력 (모두 같음)
@@ -24,9 +27,20 @@ set c [expr $a * $b] ; # 두 계산값을 c에 저장
 puts $c
 
 # 문자열도 타입상관 없이 변수에 들어감
+# 여러 문자열을 묶을 때, "" 나 {} 사용
 set a hello ; set b world ;
+set c "hello world yo"
+set d {I am also hello world}
 puts stdout $a ;  
 puts stdout $b ;
+puts stdout $c ;
+puts stdout $d ;
+
+# 리스트 만들기
+# lindex로 몇번쨰 인덱스인지 추출하기
+set myList {red green blue}
+puts [lindex $myList 2]
+puts [lindex $myList 0]
 
 
 
